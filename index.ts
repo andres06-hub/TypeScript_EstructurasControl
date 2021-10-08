@@ -104,6 +104,14 @@ for (const llave in dias) {
 
 
 
+
+// ############################
+// Estructuras de datos
+// 
+
+
+
+
 // --------------------------------------------------
 // Se define una variable de TIPO : NUMBER
 let edad: number = 18;
