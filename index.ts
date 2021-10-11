@@ -211,7 +211,22 @@ saludar();
 //en los parentesis van los parametros
 let potencia = (a: number) => a * a;
 console.log(potencia(8));
+
+//FUNCION FLECHA CON mas de una instrucción
+//funcion que toma nombres, estado y retorna un saludo
+
+let bienvenida = (nombres:string,estado:boolean) => {
+    
+    // los parametros se guardan en huna variable 
+    let nombreUsuario = nombres;
+    let estadoUsuario = estado;
+    let mensaje = `Bienvenid@ ${nombreUsuario} : Su estado es ${estadoUsuario}` 
+    return mensaje;
+}
+// Se imprimen los datos
+console.log("\n---FLECHA con varios parametros---\n",bienvenida("Stefania",true));
 console.log("--------------------------------");
+
 
 
 
@@ -233,13 +248,11 @@ console.log("\n#### setTimeout - CALLBACK ####\n");
 let milisegundos: number = 3000;
 setTimeout(function(){
     console.log("SE EJECUTO EL CALLBACK en ",milisegundos," milisegundos");
+    console.log("----------------------------------");
 },milisegundos)
 
 console.log("NO espero a que el CALLBACK se llame");
 
-setTimeout(function(){
-    console.log("----------------------------------");
-},3000)
 
 // ############################
 // Estructuras de datos
