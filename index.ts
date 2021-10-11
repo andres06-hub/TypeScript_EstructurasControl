@@ -155,11 +155,13 @@ while (i > 0) {
 
 // #############################################################
 // FUNTONS -> FUNCIONES
+
 /**
  * Las funciones cumplen una TAREA en ESPECIFICO
  * Hace una FUNCIONALIDAD.
  */
-console.log("\n************  FUNCIONES  *************\n");
+console.log("\n\t************  FUNCIONES  *************\n");
+console.log("## FUNCION NORMAL ##");
 
 function parametros(edad:number, estado?:boolean, ciudad:String = "Armenia") {
     // Imprimimos el primer parametro que es obligatorio
@@ -174,23 +176,23 @@ function parametros(edad:number, estado?:boolean, ciudad:String = "Armenia") {
     // Se imprime el parametro con el dato por defecto
     console.log(ciudad);
 }
-
+console.log("-> primeros datos");
 parametros(19, undefined);  
+console.log("\n->segundos datos");
+parametros(21,true,"cali")
+
+console.log("--------------------------------------");
 
 
-
-// ################################################
-// setTimeout
-/**
- * Es una funcion que se encarga de ejecutar otra funcion despues 
- * de un tiempo determinado, para tener una asincronizacion en el programa 
- */
-
-
-
-
-
-
+/**VARIABLE DE TIPO FUNCION */
+console.log("\n##  VARIABLE DE TIPO FUNCION  ##\n");
+//variable tipo funcion que recibe un argumento tipo
+//number y retorna su cuadrado
+//ACA LA FUNCION ES ANONIMA, NO SE NOMBRA
+let cuadrado = function(numero:number){return numero * numero;}
+// Llamamos la funcion
+let resultado = cuadrado(23);
+console.log(resultado,"\n");
 
 
 // ############################################
@@ -199,12 +201,45 @@ parametros(19, undefined);
 // Ahorra codigo
 // CUANDO TIENE SOLO UNA INSTRUCCION NO SE USA EL "return" NI LLAVES
 
-console.log("#########  FUNCION FLECHA  #########");
+console.log("#########  FUNCIONES FLECHA  #########\n");
 
 let saludar = () => console.log("Hola desde la funcion Flecha");
 
+saludar();
+
+//flecha con un argumento numerico
+//en los parentesis van los parametros
+let potencia = (a: number) => a * a;
+console.log(potencia(8));
+console.log("--------------------------------");
 
 
+
+// ################################################
+// setTimeout : ASINCRONICIDAD -TIEMPO
+/**
+ * Es una funcion que se encarga de ejecutar otra funcion despues 
+ * de un tiempo determinado, para tener una asincronizacion en el programa 
+ * 
+ * CALLBACK---> funcion anonima que se llama despues de
+ * terminado un proceso asincrono
+ */
+
+/**la funcion se ejecutara y se tardara 3000 milisegundos
+ * para mostrarse
+ */
+console.log("\n#### setTimeout - CALLBACK ####\n");
+// Se define el TIEMPO cuantos milisegundos se demorara
+let milisegundos: number = 3000;
+setTimeout(function(){
+    console.log("SE EJECUTO EL CALLBACK en ",milisegundos," milisegundos");
+},milisegundos)
+
+console.log("NO espero a que el CALLBACK se llame");
+
+setTimeout(function(){
+    console.log("----------------------------------");
+},3000)
 
 // ############################
 // Estructuras de datos
