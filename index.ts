@@ -28,8 +28,8 @@ let cualquiera2 : any = 5;
 const GRAVEDAD: number = 9.8;
 
 
-
-// template de string
+// ----------------------------
+// 'TEMPLATES'
 
 let saludo: string = "Hola mundo";
 let mensaje: string = "buenas noches";
@@ -39,21 +39,28 @@ let imprimirMensaje: string = `saludo: ${saludo}\n ${mensaje}\n año ${anno}`
 
 console.log(imprimirMensaje);
 
+let mostrarMensaje: string = "OK : "+saludo+"--"+mensaje+"--"+anno;
+console.log(mostrarMensaje);
 
+// ###########################################
 //############################################
 // ARREGLOS
 
 //arreglo que solo guarda numeros
 let arregloNumeros: number[] = [2,3,4.3];
+let listNumeros: Array<number> = [5,8,96,5.5]
 
 //arreglo que solo guarda Strings
 let arregloCadenas: string[] = ["a","hola","pepe"];
+let listCadenas: Array<string> = ["Hola", "epa", "whats up?"]
 
 //arreglo de booleans
 let arregloBooleans: boolean[] = [true, false];
+let listaBoolean: Array<boolean> = [true, false]
 
 //arreglo que guarda cualquier DATO : any
 let arregloCualquiera: any[] = [2,"hello",true];
+let listaCualquiera: Array<any> = [854.78, "numbers", true, 58]
 
 
 //############################################
@@ -107,7 +114,8 @@ for (const llave in dias) {
 
 // ############################
 // Estructuras de datos
-// 
+
+
 
 
 
