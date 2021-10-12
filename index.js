@@ -169,6 +169,12 @@ let bienvenida = (nombres, estado) => {
 // Se imprimen los datos
 console.log("\n---FLECHA con varios parametros---\n", bienvenida("Stefania", true));
 console.log("--------------------------------");
+// Funcion para sacar el modulo de dos numeros, donde entran dos parametros
+let modulo = (numero1, numero2) => {
+    let modulo = numero1 % numero2;
+    return modulo;
+};
+console.log("MODULO : ", modulo(50, 6));
 // ################################################
 // setTimeout : ASINCRONICIDAD -TIEMPO
 /**
