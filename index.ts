@@ -7,6 +7,7 @@
 
 // TIPO : String 
 let  nombre: string = "nombre";
+console.log(nombre.length);
 
 // TIPO : boolean
 let estado: boolean = true;
@@ -229,10 +230,48 @@ console.log("--------------------------------");
 
 // Funcion para sacar el modulo de dos numeros, donde entran dos parametros
 let modulo = (numero1:number, numero2:number) => {
+    
+    // Hacemos validaciones
+    if (numero1 == 0 && numero2 == 0) {
+        return "Indefinido";
+    }else if (numero2 == 0) {
+        return "INFINITO";
+    }else if (numero1 == 0){
+        return 0;
+    }
     let modulo = numero1 % numero2;
     return modulo;
 }
 console.log("MODULO : ",modulo(50,6));
+
+
+// Desestructuración de objetos y arreglos
+console.log("\n***** Desestructuración de objetos y arreglos *****");
+// PRIMER EJEMPLO
+let a:number ,b:number ,rest;
+// En arreglo
+/**El orden si importa ya que es por posicion */
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+console.log(rest);
+// SEGUNDO EJEMPLO CON key:valor (objetos)
+/**En objetos el orden no importa, porque se asigna por referencia
+ * 
+ */
+({a,b,...rest} = {a : 100, b : 200, c : 300, d : 400, e : 500});
+
+console.log("\nVariables 'a', 'b'");
+console.log(a);
+console.log(b);
+console.log("Variable rest");
+console.log(rest);
+
+// EJEMPLO 3
+const numeros = [1,2,3,4,5]
+
+const [numero1, numero2, ...numRestantes] = numeros;
+console.log(numero1);
+console.log(numero2);
+console.log(numRestantes);
 
 
 

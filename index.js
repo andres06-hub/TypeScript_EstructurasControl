@@ -3,9 +3,22 @@
 /**
  * COMENTARIO DE VARIAS LINEAS
  */
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+};
+var _a;
 // TIPOS DE DATOS
 // TIPO : String 
 let nombre = "nombre";
+console.log(nombre.length);
 // TIPO : boolean
 let estado = true;
 // TIPO : numerico, ya sea " float , integer " 
@@ -171,10 +184,44 @@ console.log("\n---FLECHA con varios parametros---\n", bienvenida("Stefania", tru
 console.log("--------------------------------");
 // Funcion para sacar el modulo de dos numeros, donde entran dos parametros
 let modulo = (numero1, numero2) => {
+    // Hacemos validaciones
+    if (numero1 == 0 && numero2 == 0) {
+        return "Indefinido";
+    }
+    else if (numero2 == 0) {
+        return "INFINITO";
+    }
+    else if (numero1 == 0) {
+        return 0;
+    }
     let modulo = numero1 % numero2;
     return modulo;
 };
 console.log("MODULO : ", modulo(50, 6));
+// Desestructuración de objetos y arreglos
+console.log("\n***** Desestructuración de objetos y arreglos *****");
+// PRIMER EJEMPLO
+let a, b, rest;
+// En arreglo
+/**El orden si importa ya que es por posicion */
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+console.log(rest);
+// SEGUNDO EJEMPLO CON key:valor (objetos)
+/**En objetos el orden no importa, porque se asigna por referencia
+ *
+ */
+(_a = { a: 100, b: 200, c: 300, d: 400, e: 500 }, { a, b } = _a, rest = __rest(_a, ["a", "b"]));
+console.log("\nVariables 'a', 'b'");
+console.log(a);
+console.log(b);
+console.log("Variable rest");
+console.log(rest);
+// EJEMPLO 3
+const numeros = [1, 2, 3, 4, 5];
+const [numero1, numero2, ...numRestantes] = numeros;
+console.log(numero1);
+console.log(numero2);
+console.log(numRestantes);
 // ################################################
 // setTimeout : ASINCRONICIDAD -TIEMPO
 /**
