@@ -63,6 +63,48 @@ let listaBoolean: Array<boolean> = [true, false]
 let arregloCualquiera: any[] = [2,"hello",true];
 let listaCualquiera: Array<any> = [854.78, "numbers", true, 58]
 
+// #############################################
+// #############################################
+// ---- CONDICIONALES ----
+
+// -->     SINTAXIS 
+
+/**
+ * if(condicion){
+ *     codigo</>
+ * 
+ * }else if(condicion){
+ *     codigo</>
+ * }
+ */
+
+// SWITCH
+/**
+ * swtch(evaluacion)
+ *    case n:
+ *      codigo</>
+ *     break;
+ * 
+ *    case n2:
+ *      codigo</>
+ *     break;
+ * 
+ *    case n...:
+ *      codigo</>
+ *     break;
+ * 
+ *    default:
+ *      codigo</>
+ *     break;
+ */
+
+//OPERADOR TERNARIO
+/**
+ * (condicion)? true : false
+ * 
+ * (condicion)? sentencia(SOLO Si es 'true') : sentencia (SOLO SI es 'false')
+ */
+
 
 //############################################
 // *************   CICLOS  *******************
