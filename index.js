@@ -66,15 +66,17 @@ let listaCualquiera = [854.78, "numbers", true, 58];
  *
  * }else if(condicion){
  *     codigo</>
+ * }else{
+ *
  * }
  */
 // SWITCH
 /**
- * swtch(evaluacion)
+ * switch(evaluacion)
  *    case n:
  *      codigo</>
  *     break;
- *
+ * s
  *    case n2:
  *      codigo</>
  *     break;
